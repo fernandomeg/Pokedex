@@ -21,7 +21,7 @@ import com.gallardf.pokedex.ui.detail.evolution_chain.PokemonEvolutionaryLineVie
 import com.gallardf.pokedex.ui.main.PokemonListViewModel
 
 @Composable
-fun AppNavigation(navigationController: NavHostController){
+fun AppNavigation(navigationController: NavHostController, pokemonName:String){
 
     NavHost(
         navController = navigationController,
@@ -29,7 +29,7 @@ fun AppNavigation(navigationController: NavHostController){
     ) {
         //Navigation to Splash Screen
         composable(NavigationScreen.SplashScreen.route) {
-            SplashScreen(navigationController)
+            SplashScreen(navigationController,pokemonName)
         }
 
         //Navigation to MainScreen

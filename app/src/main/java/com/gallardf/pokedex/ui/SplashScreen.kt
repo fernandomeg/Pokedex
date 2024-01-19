@@ -15,15 +15,25 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.gallardf.pokedex.R
 import com.gallardf.pokedex.ui.navigation.NavigationScreen
+import com.gallardf.pokedex.utils.extensions.encodeUrl
 import kotlinx.coroutines.delay
 
 @Composable
-fun SplashScreen(navController: NavHostController){
+fun SplashScreen(navController: NavHostController,pokemonName:String){
 
     LaunchedEffect(key1 = true){
         delay(5000)
         navController.popBackStack()
-        navController.navigate(NavigationScreen.MainScreen.route)
+        if(pokemonName.isEmpty()){
+            navController.navigate(NavigationScreen.MainScreen.route)
+        }else{
+            navController.navigate(
+                NavigationScreen.DetailScreen.createRoute(
+                    pokemonName,
+                    "url_default"
+                )
+            )
+        }
     }
 
     Splash()

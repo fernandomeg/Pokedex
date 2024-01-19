@@ -1,6 +1,10 @@
 package com.gallardf.pokedex
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,9 +20,19 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    private var pokemonName = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window,false)
+
+        if (Intent.ACTION_VIEW == intent.action) {
+            val uri: Uri? = intent.data
+            if (uri != null) {
+                pokemonName = uri.lastPathSegment.toString()
+            }
+        }
+
+
         ui {
             val navController = rememberNavController()
             Scaffold(
@@ -27,7 +41,7 @@ class MainActivity : ComponentActivity() {
                 BoxWithConstraints(
                     modifier = Modifier.padding(innerPadding)
                 ) {
-                    AppNavigation(navController)
+                    AppNavigation(navController,pokemonName)
                 }
             }
         }
