@@ -1,6 +1,11 @@
 # Pokedex Challenge
 ##### Este proyecto tiene por objetivo mostrar una Pokédex que nos permita visualizar el listado de Pokemon's así como sus caracteristicas generales como sus Habilidades o su Línea de Evolución. También te permite seleccionar a tus Pokemon's favoritos
 
+##### Una vez instalada, la app de Pokedex te permitirá abrirla a partir de una Uri en tu navegador y visualizar el detalle del Pokemon que quieras, esto con el siguiente formato: 
+**pokeferclip://pokemon/{ingresaNombrePokemon}** 
+
+<img src="https://github.com/fernandomeg/Pokedex/assets/57393785/ae7d7c92-f409-43ba-a7fd-c7a0ea47cd88" alt="" width="250"/>
+
 ## Modulos
 
 ### Splash Screen
