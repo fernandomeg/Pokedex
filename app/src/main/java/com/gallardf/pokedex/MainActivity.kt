@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         if (Intent.ACTION_VIEW == intent.action) {
             val uri: Uri? = intent.data
             if (uri != null) {
-                pokemonName = uri.lastPathSegment.toString()
+                pokemonName = uri.lastPathSegment.toString().lowercase()
             }
         }
 
