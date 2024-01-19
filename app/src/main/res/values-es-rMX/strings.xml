@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="pokemon_list_error_loading">Los pokemons no pudieron ser cargados</string>
+    <string name="pokemon_detail_error_loading">Pokemon detail cannot be loaded</string>
+    <string name="happiness_title">Felicidad: %1$s </string>
+    <string name="general_info_title">Información General</string>
+    <string name="capture_rate_title">Radio de Captura: %1$s </string>
+
+
+    <string name="evolutionary_line_title">Línea evolutiva</string>
+    <string name="abilities_title">Habilidades</string>
+    <string name="main_screen_title">¿Quien es\nese Pokemon?</string>
+
+    <string name="pokemon_favorite_title_dialog">Mi Pokemon Fav</string>
+    <string name="pokemon_favorite_text_dialog">¿Este Pokemon es tu Favorito?</string>
+    <string name="pokemon_favorite_add_btn_dialog">Agregar como Favorito</string>
+    <string name="pokemon_favorite_delete_btn_dialog">Quitar como Favorito</string>
+
+</resources>
